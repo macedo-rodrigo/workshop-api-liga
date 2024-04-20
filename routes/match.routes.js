@@ -22,7 +22,7 @@ router.get("/", async (req, res) => {
       totalItems: totalElements,
       totalPages: Math.ceil(totalElements / limit),
       currentPage: page,
-      data: Match,
+      data: match,
     };
 
     res.json(response);

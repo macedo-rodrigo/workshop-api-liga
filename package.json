@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node --watch index.js",
-    "seed:sample": "node ./seeds/sample.seed.js",
+    "seed:all": "node seeds/full.seed.js",
     "lint": "eslint",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install"
@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "mongoose": "^7.1.0"
+    "express": "^4.19.2",
+    "mongoose": "^7.6.11"
   }
 }
