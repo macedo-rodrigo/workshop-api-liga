@@ -1,21 +1,25 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const { SubSample } = require("./SubSample.js");
 
-const sampleSchema = new Schema(
+const playerSchema = new Schema(
   {
-    title: {
+    name: {
       type: String,
       required: true,
     },
-    subtitle: {
+    lastName: {
       type: String,
       required: true,
     },
-    child: {
-      type: mongoose.Schema.Types.ObjectId,
+    position: {
+      type: String,
       required: false,
-      ref: SubSample,
+      
+    },
+    number: {
+      type: number,
+      required: false,
+      
     },
   },
   {
@@ -23,5 +27,5 @@ const sampleSchema = new Schema(
   }
 );
 
-const Sample = mongoose.model("Sample", sampleSchema);
-module.exports = { Sample };
+const Player = mongoose.model("Sample", playerSchema);
+module.exports = { Player };
