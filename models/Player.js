@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const { Team } = require("./Team.js");
 
 const playerSchema = new Schema(
   {
@@ -19,6 +20,9 @@ const playerSchema = new Schema(
       type: Number,
       required: false,
     },
+      type: mongoose.Schema.Types.ObjectId,
+      required: false,
+      ref: Team,
   },
   {
     timestamps: true,
