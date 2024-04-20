@@ -14,12 +14,10 @@ const playerSchema = new Schema(
     position: {
       type: String,
       required: false,
-      
     },
     number: {
-      type: number,
+      type: Number,
       required: false,
-      
     },
   },
   {
@@ -27,5 +25,5 @@ const playerSchema = new Schema(
   }
 );
 
-const Player = mongoose.model("Sample", playerSchema);
+const Player = mongoose.model("Player", playerSchema);
 module.exports = { Player };
