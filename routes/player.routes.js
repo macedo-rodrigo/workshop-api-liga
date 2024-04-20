@@ -13,8 +13,8 @@ router.get("/", async (req, res) => {
     const limit = parseInt(req.query.limit);
     const player = await Player.find()
       .limit(limit)
-      .skip((page - 1) * limit);
-
+      .skip((page - 1) * limit)
+      .populate("team")
     // Num total de elementos
     const totalElements = await Player.countDocuments();
 
